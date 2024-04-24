@@ -1,5 +1,7 @@
-fn process_leapyear_case(year: u64, expected: bool) {
-    assert_eq!(leap::is_leap_year(year), expected);
+use crate::lib::is_leap_year;
+
+fn process_leapyear_case(year: i32, expected: bool) {
+    assert_eq!(is_leap_year(year), expected);
 }
 
 #[test]
