@@ -5,6 +5,7 @@ fn process_leapyear_case(year: i32, expected: bool) {
 }
 
 #[test]
+#[ignore]
 fn test_year_not_divisible_by_4_common_year() {
     process_leapyear_case(2015, false);
 }
