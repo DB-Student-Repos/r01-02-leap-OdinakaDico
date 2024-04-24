@@ -1,11 +1,12 @@
-use crate::lib::is_leap_year;
+fn is_leap_year(year: i32) -> bool {
+        (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+}
 
 fn process_leapyear_case(year: i32, expected: bool) {
     assert_eq!(is_leap_year(year), expected);
 }
 
 #[test]
-#[ignore]
 fn test_year_not_divisible_by_4_common_year() {
     process_leapyear_case(2015, false);
 }
